@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/header"
+import Footer from "./components/footer"
 import Home from "./Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
@@ -9,6 +10,8 @@ import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
   return (
+    <div>
+    <Header/>
     <AuthProvider>
       <Router>
         <div>
@@ -18,6 +21,8 @@ const App = () => {
         </div>
       </Router>
     </AuthProvider>
+    <Footer/>
+    </div>
   );
 };
 
