@@ -5,8 +5,9 @@ import Footer from "./components/footer"
 import Home from "./Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
+import Eventos from "./components/eventos"
 import { AuthProvider } from "./Auth";
-import PrivateRoute from "./PrivateRoute";
+//import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
     <AuthProvider>
       <Router>
         <div>
-          <PrivateRoute exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/eventos" component={Eventos} />
           <Route exact path="/signup" component={SignUp} />
         </div>
       </Router>
