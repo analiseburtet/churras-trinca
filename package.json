@@ -32,6 +32,7 @@
     ]
   },
   "devDependencies": {
-    "tachyons": "^4.10.0"
+    "tachyons": "^4.10.0",
+    "babel-jest": "24.7.1"
   }
 }
