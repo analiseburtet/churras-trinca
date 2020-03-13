@@ -2,7 +2,10 @@ Uma agenda de eventos, possibilita criar novo evento e remove-lo. Adicionar pess
 
 :construction: :construction: :construction:
 
-Run `yarn start` to start application.
+## How to run the project:
+- Use node v 11
+- Run `yarn
+- Run `yarn start` to start application.
 
 ## TODO
 
