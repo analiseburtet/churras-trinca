@@ -1,0 +1,11 @@
+@media only screen and (max-width: 600px) {
+    .sm {
+        width: 45%;
+    }
+    .mg-sm {
+        margin-left: 5px;
+    }
+    .fz {
+        font-size: 12px;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import firebase from '../base.js'
+import "./eventos.css"
 
 const Eventos = () => {
     const [ title,setTitle ] = useState('')
@@ -33,19 +34,21 @@ const Eventos = () => {
     }
 
     return(
-        <form onSubmit={onSubmit}>
-            <input placeholder="Nome do evento" value={title} onChange={e => setTitle(e.currentTarget.value)}/>
-            <input placeholder="17/01" type="number" value={time} onChange={e => setTime(e.currentTarget.value)}/>
-            <label>Quem vai?</label>
-            <ul>
+        <form onSubmit={onSubmit} className="flex w-100 justify-center flex-wrap">
+        <div className="flex w-max w-100 justify-center flex-wrap ba b--light-gray pa3 mb5 mt3 mr5 ml5 br4 shadow-5">
+            <input className="flex w-100 justify-center flex-wrap ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5" placeholder="Nome do evento:" value={title} onChange={e => setTitle(e.currentTarget.value)}/>
+            <input className="flex w-100 justify-center flex-wrap ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5" placeholder="17.01" type="number" value={time} onChange={e => setTime(e.currentTarget.value)}/>
+            <label className="flex w-100 flex-wrap pa3 mb2 mt2 mr2 ml2 br4 orange b">Quem vai?</label>
+            <ul className="flex w-100 justify-center flex-wrap ba b--light-gray pa3 br4 shadow-5 list">
                 <li>
-                    <label>Vegetariano/Vegano/LACFREE/GF</label><input value={vegan} type="checkbox" onChange={e => setVegan(e.currentTarget.checked)}/> 
-                    <label>Nome:</label><input placeholder="Convidado" value={people} onChange={e => setPeople(e.currentTarget.value)}/>
-                    <label>Quanto vai contribuir?</label><input value={donation} onChange={e => setDonation(e.currentTarget.value)} type="number"/>
-                    <label>Já pagou?</label><input value={donated} onChange={e => setDonated(e.currentTarget.checked)} type="checkbox"/>
+                    <input value={donated} onChange={e => setDonated(e.currentTarget.checked)} type="checkbox"/>
+                    <input className="flex ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5" placeholder="Ana" value={people} onChange={e => setPeople(e.currentTarget.value)}/>
+                    <label className="flex w-100 ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5">Vegetariano/Vegano/LACFREE/GF?</label><input value={vegan} type="checkbox" onChange={e => setVegan(e.currentTarget.checked)}/> 
+                    <label className="flex w-100 ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5">Quanto vai contribuir?</label><input className="flex w-100 justify-center flex-wrap ba b--light-gray pa3 mb2 mt2 mr2 ml2 br4 shadow-5" value={donation} onChange={e => setDonation(e.currentTarget.value)} type="number" placeholder="R$ 25,00"/>
                 </li>
             </ul>
-            <button>Criar Evento</button>
+            <button className="b--orange bg-orange ba b--light-gray w-25 sm pa3 mr2 mb2 mt2 br4 white b shadow-4">Criar evento</button>
+        </div>
         </form>
     )
 }
