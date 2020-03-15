@@ -6,6 +6,9 @@
 }
 body {
   font-family: 'Raleway';
+  margin: 0;
+  height: 100%;
+  
 }
 
 /*! TACHYONS v4.11.1 | http://tachyons.io */

@@ -7,16 +7,16 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import Eventos from "./components/eventos"
 import { AuthProvider } from "./Auth";
-//import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
   return (
-    <div>
+    <div className="vh-100">
     <Header/>
     <AuthProvider>
       <Router>
         <div>
-          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/eventos" component={Eventos} />
           <Route exact path="/signup" component={SignUp} />
