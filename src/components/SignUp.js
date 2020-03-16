@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import app from "./base";
-import './components/eventos.css'
+import app from "../base";
+import './eventos.css'
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(async event => {

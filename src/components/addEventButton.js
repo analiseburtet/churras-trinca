@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import Churrasqueira from '../assets/churrasqueira.png' 
+import Churrasqueira from '../images/churrasqueira.png' 
 const AddEventButton = () => {
     return(
         <div className="flex tc justify-center">

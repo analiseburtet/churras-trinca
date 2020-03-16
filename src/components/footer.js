@@ -1,5 +1,5 @@
 import React from 'react'
-import Trinca from '../assets/trinca.png'
+import Trinca from '../images/trinca.png'
 import app from "../base"
 const Footer = () => {
     return(
